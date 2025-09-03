@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IRCV – Viña del Mar</title>
+  <style>
+    body{font-family:system-ui,Arial,sans-serif;margin:2rem;line-height:1.5;}
+    .wrap{max-width:900px;margin:auto}
+    h1{margin-bottom:.2rem}
+    .cards{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:1rem}
+    .card{border:1px solid #e5e7eb;border-radius:12px;padding:1rem}
+    .btn{display:inline-block;padding:.6rem 1rem;border-radius:10px;text-decoration:none;border:1px solid #e5e7eb}
+    .btn:hover{background:#f3f4f6}
+    header{display:flex;gap:1rem;align-items:center}
+    img.logo{height:48px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <!-- Opcional: sube logo.png al repo y descomenta la línea siguiente -->
+      <!-- <img class="logo" src="logo.png" alt="Logo" /> -->
+      <div>
+        <h1>Indicador de Riesgo Vial Ciclista – Viña del Mar</h1>
+        <small>Mapas interactivos publicados con GitHub Pages</small>
+      </div>
+    </header>
+
+    <p>Explora los resultados del proyecto. Cada mapa se abre en una pestaña:</p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Mapa de prueba</h3>
+        <p>Versión exportada desde R (mapview).</p>
+        <a class="btn" href="Prueba_Indicador.html" target="_blank">Abrir mapa</a>
+      </div>
+      <!-- Agrega más tarjetas si subes más HTMLs -->
+      <!--
+      <div class="card">
+        <h3>Tasa por 1.000 hab.</h3>
+        <a class="btn" href="mapa_tasa.html" target="_blank">Abrir</a>
+      </div>
+      -->
+    </div>
+  </div>
+</body>
+</html>
