@@ -3,46 +3,60 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>IRCV – Viña del Mar</title>
+  <title>IRCV – Viña del Mar | Mapas interactivos</title>
   <style>
-    body{font-family:system-ui,Arial,sans-serif;margin:2rem;line-height:1.5;}
-    .wrap{max-width:900px;margin:auto}
-    h1{margin-bottom:.2rem}
-    .cards{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:1rem}
-    .card{border:1px solid #e5e7eb;border-radius:12px;padding:1rem}
-    .btn{display:inline-block;padding:.6rem 1rem;border-radius:10px;text-decoration:none;border:1px solid #e5e7eb}
-    .btn:hover{background:#f3f4f6}
-    header{display:flex;gap:1rem;align-items:center}
-    img.logo{height:48px}
+    :root{--bg:#ffffff;--text:#111827;--muted:#6b7280;--card:#f9fafb;--line:#e5e7eb;}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif}
+    header{display:flex;gap:1rem;align-items:center;padding:1.25rem 1rem;border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0}
+    .wrap{max-width:1100px;margin:0 auto;padding:0 1rem}
+    .logo{height:44px}
+    h1{font-size:1.4rem;margin:.2rem 0}
+    p.lead{color:var(--muted);margin:.2rem 0 0 0}
+    .grid{display:grid;gap:1rem;padding:1.25rem 0;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1rem;display:flex;flex-direction:column;justify-content:space-between}
+    .card h3{margin:.2rem 0 .4rem}
+    .card p{margin:0 0 .75rem 0;color:var(--muted);min-height:3rem}
+    .btn{display:inline-block;border:1px solid var(--line);padding:.55rem .9rem;border-radius:10px;text-decoration:none;color:var(--text)}
+    .btn:hover{background:#eef2ff;border-color:#c7d2fe}
+    footer{padding:1.25rem 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <!-- Opcional: sube logo.png al repo y descomenta la línea siguiente -->
-      <!-- <img class="logo" src="logo.png" alt="Logo" /> -->
-      <div>
-        <h1>Indicador de Riesgo Vial Ciclista – Viña del Mar</h1>
-        <small>Mapas interactivos publicados con GitHub Pages</small>
-      </div>
-    </header>
+  <header>
+    <!-- Sube un logo (logo.png) al repo y descomenta la línea siguiente -->
+    <!-- <img class="logo" src="logo.png" alt="Logo"> -->
+    <div class="wrap">
+      <h1>Indicador de Riesgo Vial Ciclista – Viña del Mar</h1>
+      <p class="lead">Mapas interactivos publicados con GitHub Pages</p>
+    </div>
+  </header>
 
-    <p>Explora los resultados del proyecto. Cada mapa se abre en una pestaña:</p>
-
-    <div class="cards">
+  <main class="wrap">
+    <div class="grid">
       <div class="card">
-        <h3>Mapa de prueba</h3>
-        <p>Versión exportada desde R (mapview).</p>
+        <h3>Mapa 1: Densidad / Tasa superficial</h3>
+        <p>Versión exportada desde R (mapview). Incluye ciclovías y siniestros con bicicleta.</p>
         <a class="btn" href="Prueba_Indicador.html" target="_blank">Abrir mapa</a>
       </div>
-      <!-- Agrega más tarjetas si subes más HTMLs -->
-      <!--
+
       <div class="card">
-        <h3>Tasa por 1.000 hab.</h3>
-        <a class="btn" href="mapa_tasa.html" target="_blank">Abrir</a>
+        <h3>Mapa 2: Indicador alternativo</h3>
+        <p>Segunda vista del indicador (escala Jenks + 0 casos). Ideal para contraste territorial.</p>
+        <a class="btn" href="Prueba_Indicador2.html" target="_blank">Abrir mapa</a>
       </div>
-      -->
+
+      <div class="card">
+        <h3>Mapa 3: IRVC compuesto</h3>
+        <p>Combinación de métricas (población, superficie y proximidad a ciclovías), con capas de contexto.</p>
+        <a class="btn" href="Prueba_Indicador3.html" target="_blank">Abrir mapa</a>
+      </div>
     </div>
-  </div>
+  </main>
+
+  <footer class="wrap">
+    <!-- Personaliza con tu oficina/municipalidad -->
+    © 2025 – Proyecto IRCV Viña del Mar. Mapas interactivos para participación ciudadana.
+  </footer>
 </body>
 </html>
+
